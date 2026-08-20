@@ -1,0 +1,3111 @@
+@import url('https://fonts.googleapis.com/css2?family=Allura&family=Cormorant+Garamond:wght@400;500;600&display=swap');
+
+:root {
+    --ivory: #FDF9F3;
+    --rose: #D98986;
+    --gold: #C99F55;
+    --ink: #292936;
+    --sage: #AAB49A;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--ivory);
+    color: var(--ink);
+}
+
+
+/* ==========================================
+   01 · PORTADA
+========================================== */
+
+.portada {
+    position: relative;
+    min-height: 100svh;
+    overflow: hidden;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 70px 25px;
+
+    background: var(--ivory);
+}
+
+.contenido-portada {
+    position: relative;
+    z-index: 5;
+
+    width: min(90%, 700px);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    text-align: center;
+}
+
+.encabezado {
+    margin: 0 0 22px;
+
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 18px;
+    font-weight: 600;
+
+    letter-spacing: 7px;
+}
+
+h1 {
+    margin: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+
+    font-family: 'Allura', cursive;
+    font-size: clamp(76px, 11vw, 125px);
+    font-weight: 400;
+
+    line-height: .82;
+
+    color: var(--rose);
+}
+
+.nombre {
+    display: inline-block;
+}
+
+.ampersand {
+    display: inline-block;
+
+    margin: 0 14px;
+
+    font-size: .55em;
+
+    color: var(--gold);
+}
+
+.anillos {
+    position: relative;
+    z-index: 6;
+
+    width: min(230px, 55vw);
+
+    margin: 28px 0 22px;
+}
+
+.fecha {
+    margin: 8px 0 0;
+
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 24px;
+    font-weight: 500;
+
+    letter-spacing: 4px;
+}
+
+
+/* FLORES PORTADA */
+
+.flores {
+    position: absolute;
+    z-index: 2;
+
+    height: auto;
+
+    pointer-events: none;
+}
+
+.flores-superior {
+    width: min(470px, 75vw);
+
+    top: -70px;
+    left: -90px;
+}
+
+.flores-inferior {
+    width: min(560px, 85vw);
+
+    right: -90px;
+    bottom: -70px;
+}
+
+
+/* DESTELLOS PORTADA */
+
+.destellos {
+    position: absolute;
+    inset: 0;
+
+    z-index: 3;
+
+    pointer-events: none;
+}
+
+.destello {
+    position: absolute;
+    display: block;
+
+    object-fit: contain;
+
+    pointer-events: none;
+}
+
+.destello-1 {
+    width: 125px;
+    top: 16%;
+    right: 15%;
+}
+
+.destello-2 {
+    width: 105px;
+    top: 47%;
+    left: 7%;
+}
+
+.destello-3 {
+    width: 100px;
+    top: 54%;
+    right: 8%;
+}
+
+.destello-4 {
+    width: 42px;
+    top: 28%;
+    left: 15%;
+}
+
+.destello-5 {
+    width: 36px;
+    top: 33%;
+    right: 19%;
+}
+
+.destello-6 {
+    width: 38px;
+    top: 43%;
+    left: 14%;
+}
+
+.destello-7 {
+    width: 34px;
+    top: 49%;
+    right: 16%;
+}
+
+.destello-8 {
+    width: 38px;
+    top: 65%;
+    left: 12%;
+}
+
+.destello-9 {
+    width: 35px;
+    top: 69%;
+    right: 15%;
+}
+
+
+/* ==========================================
+   02 · VERSÍCULO
+========================================== */
+
+.seccion-versiculo {
+    position: relative;
+
+    min-height: 100svh;
+    overflow: hidden;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 100px 30px;
+}
+
+.versiculo-contenido {
+    position: relative;
+    z-index: 3;
+
+    width: min(90%, 760px);
+
+    text-align: center;
+}
+
+.versiculo {
+    margin: 38px 0 24px;
+
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(42px, 5vw, 68px);
+
+    line-height: 1.18;
+}
+
+.referencia {
+    margin: 0 0 38px;
+
+    font-family: 'Allura', cursive;
+    font-size: 36px;
+
+    color: var(--rose);
+}
+
+.detalle-dorado {
+    width: 85px;
+    height: 1px;
+
+    margin: 0 auto;
+
+    background: var(--gold);
+
+    opacity: .75;
+}
+
+.versiculo-destello {
+    position: absolute;
+    z-index: 2;
+
+    width: 65px;
+
+    opacity: .55;
+
+    pointer-events: none;
+}
+
+.versiculo-destello-1 {
+    top: 28%;
+    left: 16%;
+}
+
+.versiculo-destello-2 {
+    right: 16%;
+    bottom: 28%;
+}
+
+
+/* ==========================================
+   03 · INVITADO
+========================================== */
+
+.seccion-invitado {
+    position: relative;
+
+    min-height: 100svh;
+    overflow: hidden;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 100px 30px;
+}
+
+.invitado-contenido {
+    position: relative;
+    z-index: 3;
+
+    width: min(90%, 650px);
+
+    text-align: center;
+}
+
+.invitado-intro {
+    margin: 0;
+
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 17px;
+    font-weight: 600;
+
+    line-height: 1.7;
+
+    letter-spacing: 4px;
+}
+
+.invitado-intro span {
+    display: block;
+}
+
+.invitado-linea {
+    width: 75px;
+    height: 1px;
+
+    margin: 34px auto;
+
+    background: var(--gold);
+
+    opacity: .75;
+}
+
+.invitado-nombre {
+    margin: 0;
+
+    font-family: 'Allura', cursive;
+    font-size: clamp(52px, 6vw, 72px);
+
+    line-height: 1;
+
+    color: var(--rose);
+}
+
+.invitado-reserva {
+    margin: 28px 0 8px;
+
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 23px;
+}
+
+.lugares {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+
+    gap: 10px;
+
+    margin-top: 5px;
+}
+
+.lugares-numero {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 72px;
+    font-weight: 500;
+
+    line-height: 1;
+
+    color: var(--gold);
+}
+
+.lugares-texto {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 26px;
+}
+
+.invitado-linea-inferior {
+    margin-top: 30px;
+}
+
+.invitado-fecha {
+    margin: 0;
+
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 21px;
+    font-weight: 500;
+
+    letter-spacing: 4px;
+}
+
+.invitado-lugar {
+    margin: 12px 0 0;
+
+    font-family: 'Allura', cursive;
+    font-size: 30px;
+
+    color: var(--rose);
+}
+
+.invitado-destello {
+    position: absolute;
+    z-index: 2;
+
+    width: 55px;
+
+    opacity: .48;
+
+    pointer-events: none;
+}
+
+.invitado-destello-1 {
+    top: 24%;
+    right: 15%;
+}
+
+.invitado-destello-2 {
+    left: 15%;
+    bottom: 23%;
+}
+
+
+/* ==========================================
+   ELEMENTOS COMPARTIDOS
+========================================== */
+
+.ornamento-titulo,
+.ornamento-hora {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 8px;
+}
+
+.ornamento-titulo {
+    margin: 18px 0 22px;
+}
+
+.ornamento-hora {
+    margin: 8px 0 22px;
+}
+
+.ornamento-titulo span,
+.ornamento-hora span {
+    width: 42px;
+    height: 1px;
+
+    background: var(--gold);
+}
+
+.ornamento-titulo b,
+.ornamento-hora b {
+    font-size: 12px;
+    font-weight: 400;
+
+    color: var(--gold);
+}
+
+.boton-ubicacion {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 9px;
+
+    margin-top: 30px;
+
+    padding: 13px 28px;
+
+    border: 1px solid var(--gold);
+    border-radius: 100px;
+
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 14px;
+    font-weight: 600;
+
+    letter-spacing: 2px;
+
+    color: var(--rose);
+
+    text-decoration: none;
+
+    transition:
+        transform .25s ease,
+        background .25s ease;
+}
+
+.boton-ubicacion:hover {
+    transform: translateY(-2px);
+
+    background: rgba(217, 137, 134, .07);
+}
+
+.pin {
+    font-size: 18px;
+
+    color: var(--gold);
+}
+
+
+/* ==========================================
+   04 · CEREMONIA
+========================================== */
+
+.seccion-ceremonia {
+    position: relative;
+
+    min-height: 100svh;
+    overflow: hidden;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 85px 30px;
+}
+
+.ceremonia-contenido {
+    position: relative;
+    z-index: 3;
+
+    width: min(90%, 700px);
+
+    text-align: center;
+}
+
+.ceremonia-titulo {
+    margin: 0;
+
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 18px;
+    font-weight: 600;
+
+    letter-spacing: 8px;
+}
+
+.imagen-ceremonia {
+    display: block;
+
+    width: min(230px, 48vw);
+    height: auto;
+
+    margin: 0 auto 14px;
+}
+
+.ceremonia-nombre {
+    margin: 0;
+
+    font-family: 'Allura', cursive;
+    font-size: clamp(50px, 6vw, 70px);
+
+    line-height: 1.05;
+
+    color: var(--rose);
+}
+
+.ceremonia-hora {
+    margin: 24px 0 0;
+
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 56px;
+
+    line-height: 1;
+
+    color: var(--gold);
+}
+
+.ceremonia-hora span {
+    margin-left: 5px;
+
+    font-size: 20px;
+
+    letter-spacing: 3px;
+
+    color: var(--ink);
+}
+
+.ceremonia-direccion {
+    margin: 0;
+
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+
+    line-height: 1.5;
+}
+
+.ceremonia-destello {
+    position: absolute;
+    z-index: 2;
+
+    width: 78px;
+
+    opacity: .72;
+
+    pointer-events: none;
+}
+
+.ceremonia-destello-1 {
+    top: 13%;
+    left: 8%;
+}
+
+.ceremonia-destello-2 {
+    right: 8%;
+    bottom: 13%;
+}
+
+
+/* ==========================================
+   05 · RECEPCIÓN
+========================================== */
+
+.seccion-recepcion {
+    position: relative;
+
+    min-height: 100svh;
+    overflow: hidden;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 85px 30px;
+}
+
+.recepcion-contenido {
+    position: relative;
+    z-index: 3;
+
+    width: min(90%, 700px);
+
+    text-align: center;
+}
+
+.recepcion-titulo {
+    margin: 0;
+
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 18px;
+    font-weight: 600;
+
+    letter-spacing: 8px;
+}
+
+.imagen-recepcion {
+    display: block;
+
+    width: min(250px, 52vw);
+    height: auto;
+
+    margin: 0 auto 14px;
+}
+
+.recepcion-nombre {
+    margin: 0;
+
+    font-family: 'Allura', cursive;
+    font-size: clamp(50px, 6vw, 70px);
+
+    line-height: 1.05;
+
+    color: var(--rose);
+}
+
+.recepcion-hora {
+    margin: 24px 0 0;
+
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 56px;
+
+    line-height: 1;
+
+    color: var(--gold);
+}
+
+.recepcion-hora span {
+    margin-left: 5px;
+
+    font-size: 20px;
+
+    letter-spacing: 3px;
+
+    color: var(--ink);
+}
+
+.recepcion-direccion {
+    margin: 0;
+
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+
+    line-height: 1.5;
+}
+
+.recepcion-destello {
+    position: absolute;
+    z-index: 2;
+
+    width: 78px;
+
+    opacity: .72;
+
+    pointer-events: none;
+}
+
+.recepcion-destello-1 {
+    top: 13%;
+    right: 8%;
+}
+
+.recepcion-destello-2 {
+    left: 8%;
+    bottom: 13%;
+}
+
+
+/* ==========================================
+   06 · PAPÁS Y PADRINOS
+========================================== */
+
+.seccion-familia {
+    position: relative;
+
+    min-height: 120svh;
+    overflow: hidden;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 120px 35px;
+
+    background: var(--ivory);
+}
+
+.familia-contenido {
+    position: relative;
+    z-index: 4;
+
+    width: min(88%, 820px);
+
+    text-align: center;
+}
+
+
+/* TÍTULO PRINCIPAL */
+
+.familia-titulo {
+    margin: 0;
+
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+    font-weight: 600;
+
+    line-height: 1.8;
+
+    letter-spacing: 8px;
+}
+
+.familia-titulo span {
+    display: block;
+}
+
+
+/* SEPARADORES */
+
+.familia-separador {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 10px;
+
+    margin: 28px 0 42px;
+}
+
+.familia-separador span {
+    width: 95px;
+    height: 1px;
+
+    background: var(--gold);
+
+    opacity: .8;
+}
+
+.familia-separador b {
+    font-size: 16px;
+    font-weight: 400;
+
+    color: var(--gold);
+}
+
+.familia-separador-medio {
+    margin: 38px 0;
+}
+
+.familia-separador-especial {
+    margin: 42px 0 38px;
+}
+
+.familia-separador-final {
+    margin: 42px 0 0;
+}
+
+
+/* BLOQUES */
+
+.familia-bloque {
+    position: relative;
+}
+
+
+/* SUBTÍTULOS */
+
+.familia-subtitulo {
+    margin: 0 0 18px;
+
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 17px;
+    font-weight: 600;
+
+    letter-spacing: 6px;
+}
+
+
+/* NOMBRES */
+
+.familia-nombre {
+    margin: 0;
+
+    font-family: 'Allura', cursive;
+
+    font-size: clamp(46px, 5.4vw, 67px);
+
+    line-height: 1.05;
+
+    color: var(--rose);
+}
+
+.familia-nombre-largo {
+    font-size: clamp(41px, 4.8vw, 60px);
+}
+
+
+/* AMPERSAND */
+
+.familia-y {
+    margin: 7px 0;
+
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 38px;
+
+    line-height: 1;
+
+    color: var(--gold);
+}
+
+
+/* CRUZ EN MEMORIA */
+
+.cruz-memoria {
+    display: inline-block;
+
+    margin-left: 6px;
+
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: .55em;
+    font-weight: 500;
+
+    vertical-align: .35em;
+
+    color: var(--gold);
+}
+
+
+/* FLORES DE ESQUINA */
+
+.familia-flor {
+    position: absolute;
+    z-index: 2;
+
+    width: min(310px, 33vw);
+
+    height: auto;
+
+    pointer-events: none;
+}
+
+.familia-flor-1 {
+    top: -55px;
+    left: -70px;
+}
+
+.familia-flor-2 {
+    top: -55px;
+    right: -70px;
+
+    transform: scaleX(-1);
+}
+
+.familia-flor-3 {
+    bottom: -55px;
+    left: -70px;
+
+    transform: scaleY(-1);
+}
+
+.familia-flor-4 {
+    right: -70px;
+    bottom: -55px;
+
+    transform:
+        scaleX(-1)
+        scaleY(-1);
+}
+
+
+/* DESTELLOS */
+
+.familia-destello {
+    position: absolute;
+    z-index: 3;
+
+    width: 60px;
+
+    opacity: .55;
+
+    pointer-events: none;
+}
+
+.familia-destello-1 {
+    top: 30%;
+    right: 8%;
+}
+
+.familia-destello-2 {
+    left: 8%;
+    bottom: 28%;
+}
+
+
+/* ==========================================
+   ANIMACIÓN
+========================================== */
+
+.revelar {
+    opacity: 0;
+
+    transform: translateY(35px);
+
+    transition:
+        opacity 1.2s ease,
+        transform 1.2s ease;
+}
+
+.revelar.visible {
+    opacity: 1;
+
+    transform: translateY(0);
+}
+
+
+/* ==========================================
+   CELULAR
+========================================== */
+
+@media (max-width: 600px) {
+
+    .portada {
+        padding: 120px 20px 100px;
+    }
+
+    .contenido-portada {
+        width: 100%;
+    }
+
+    .flores-superior {
+        width: 68vw;
+
+        top: -25px;
+        left: -65px;
+    }
+
+    .flores-inferior {
+        width: 94vw;
+
+        right: -90px;
+        bottom: -60px;
+    }
+
+    .encabezado {
+        margin-bottom: 24px;
+
+        font-size: 13px;
+
+        letter-spacing: 5px;
+    }
+
+    h1 {
+        flex-direction: column;
+
+        font-size: clamp(72px, 22vw, 100px);
+
+        line-height: .78;
+    }
+
+    .ampersand {
+        display: block;
+
+        margin: 10px 0 7px;
+
+        font-size: .45em;
+
+        line-height: .8;
+    }
+
+    .anillos {
+        width: 180px;
+
+        margin: 30px 0 24px;
+    }
+
+    .fecha {
+        font-size: 18px;
+
+        letter-spacing: 3px;
+    }
+
+    .destello-1 {
+        width: 112px;
+        top: 16%;
+        right: 4%;
+    }
+
+    .destello-2 {
+        width: 96px;
+        top: 46%;
+        left: 0;
+    }
+
+    .destello-3 {
+        width: 92px;
+        top: 55%;
+        right: 5%;
+    }
+
+    .destello-4 {
+        width: 31px;
+        top: 27%;
+        left: 10%;
+    }
+
+    .destello-5 {
+        width: 28px;
+        top: 34%;
+        right: 9%;
+    }
+
+    .destello-6 {
+        width: 30px;
+        top: 42%;
+        left: 9%;
+    }
+
+    .destello-7 {
+        width: 27px;
+        top: 49%;
+        right: 8%;
+    }
+
+    .destello-8 {
+        width: 29px;
+        top: 66%;
+        left: 7%;
+    }
+
+    .destello-9 {
+        width: 27px;
+        top: 69%;
+        right: 10%;
+    }
+
+
+    /* VERSÍCULO */
+
+    .seccion-versiculo {
+        min-height: 85svh;
+
+        padding: 100px 28px;
+    }
+
+    .versiculo {
+        margin: 30px 0 22px;
+
+        font-size: 40px;
+    }
+
+    .referencia {
+        margin-bottom: 30px;
+
+        font-size: 31px;
+    }
+
+
+    /* INVITADO */
+
+    .seccion-invitado {
+        min-height: 90svh;
+
+        padding: 95px 25px;
+    }
+
+    .invitado-intro {
+        font-size: 13px;
+
+        letter-spacing: 3px;
+    }
+
+    .invitado-nombre {
+        font-size: 53px;
+    }
+
+    .invitado-reserva {
+        font-size: 20px;
+    }
+
+    .lugares-numero {
+        font-size: 62px;
+    }
+
+    .lugares-texto {
+        font-size: 23px;
+    }
+
+    .invitado-fecha {
+        font-size: 17px;
+
+        letter-spacing: 3px;
+    }
+
+    .invitado-lugar {
+        font-size: 27px;
+    }
+
+
+    /* CEREMONIA */
+
+    .seccion-ceremonia {
+        min-height: 100svh;
+
+        padding: 78px 22px;
+    }
+
+    .ceremonia-contenido {
+        width: 100%;
+    }
+
+    .ceremonia-titulo {
+        font-size: 14px;
+
+        letter-spacing: 6px;
+    }
+
+    .imagen-ceremonia {
+        width: 190px;
+
+        margin-bottom: 12px;
+    }
+
+    .ceremonia-nombre {
+        font-size: 50px;
+    }
+
+    .ceremonia-hora {
+        margin-top: 21px;
+
+        font-size: 50px;
+    }
+
+    .ceremonia-hora span {
+        font-size: 17px;
+    }
+
+    .ceremonia-direccion {
+        font-size: 18px;
+    }
+
+    .ceremonia-destello {
+        width: 64px;
+
+        opacity: .68;
+    }
+
+    .ceremonia-destello-1 {
+        top: 10%;
+        left: 2%;
+    }
+
+    .ceremonia-destello-2 {
+        right: 2%;
+        bottom: 10%;
+    }
+
+
+    /* RECEPCIÓN */
+
+    .seccion-recepcion {
+        min-height: 100svh;
+
+        padding: 78px 22px;
+    }
+
+    .recepcion-contenido {
+        width: 100%;
+    }
+
+    .recepcion-titulo {
+        font-size: 14px;
+
+        letter-spacing: 6px;
+    }
+
+    .imagen-recepcion {
+        width: 205px;
+
+        margin-bottom: 12px;
+    }
+
+    .recepcion-nombre {
+        font-size: 50px;
+    }
+
+    .recepcion-hora {
+        margin-top: 21px;
+
+        font-size: 50px;
+    }
+
+    .recepcion-hora span {
+        font-size: 17px;
+    }
+
+    .recepcion-direccion {
+        font-size: 18px;
+    }
+
+    .recepcion-destello {
+        width: 64px;
+
+        opacity: .68;
+    }
+
+    .recepcion-destello-1 {
+        top: 10%;
+        right: 2%;
+    }
+
+    .recepcion-destello-2 {
+        left: 2%;
+        bottom: 10%;
+    }
+
+    .boton-ubicacion {
+        margin-top: 27px;
+
+        padding: 12px 23px;
+
+        font-size: 13px;
+    }
+
+
+    /* =========================
+       PAPÁS Y PADRINOS
+    ========================= */
+
+    .seccion-familia {
+        min-height: 125svh;
+
+        padding: 120px 22px 130px;
+    }
+
+    .familia-contenido {
+        width: 100%;
+    }
+
+    .familia-titulo {
+        font-size: 14px;
+
+        line-height: 1.9;
+
+        letter-spacing: 5px;
+    }
+
+    .familia-separador {
+        margin: 24px 0 34px;
+    }
+
+    .familia-separador span {
+        width: 55px;
+    }
+
+    .familia-separador-medio {
+        margin: 32px 0;
+    }
+
+    .familia-separador-especial {
+        margin: 34px 0 32px;
+    }
+
+    .familia-separador-final {
+        margin-top: 35px;
+    }
+
+    .familia-subtitulo {
+        margin-bottom: 15px;
+
+        font-size: 13px;
+
+        letter-spacing: 4px;
+    }
+
+.familia-nombre {
+    font-size: 38px;
+    line-height: 1.08;
+}
+
+    .familia-nombre-largo {
+        font-size: 36px;
+    }
+
+    .padrino-nombre-largo {
+    font-size: 33px;
+}
+
+    .familia-y {
+        margin: 6px 0;
+
+        font-size: 31px;
+    }
+
+    .familia-flor {
+        width: 48vw;
+    }
+
+    .familia-flor-1 {
+        top: -15px;
+        left: -85px;
+    }
+
+    .familia-flor-2 {
+        top: -15px;
+        right: -85px;
+    }
+
+    .familia-flor-3 {
+        bottom: -20px;
+        left: -85px;
+    }
+
+    .familia-flor-4 {
+        right: -85px;
+        bottom: -20px;
+    }
+
+    .familia-destello {
+        width: 42px;
+
+        opacity: .48;
+    }
+
+    .familia-destello-1 {
+        top: 31%;
+        right: 2%;
+    }
+
+    .familia-destello-2 {
+        left: 2%;
+        bottom: 29%;
+    }
+}
+
+/* ==========================================
+   AJUSTE FINAL · PAPÁS Y PADRINOS
+========================================== */
+
+/* Cruz en memoria de Herminia */
+.cruz-memoria {
+    display: inline-block;
+    margin-left: 7px;
+
+    font-family: 'Cormorant Garamond', serif;
+    font-size: .82em;
+    font-weight: 500;
+
+    line-height: 1;
+    vertical-align: .22em;
+
+    color: var(--gold);
+}
+
+
+/* Flores de escritorio */
+.familia-flor {
+    width: min(290px, 30vw);
+}
+
+.familia-flor-1 {
+    top: 20px;
+    left: 15px;
+}
+
+.familia-flor-2 {
+    top: 20px;
+    right: 15px;
+
+    transform: scaleX(-1);
+}
+
+.familia-flor-3 {
+    bottom: 20px;
+    left: 15px;
+
+    transform: scaleY(-1);
+}
+
+.familia-flor-4 {
+    right: 15px;
+    bottom: 20px;
+
+    transform: scaleX(-1) scaleY(-1);
+}
+
+
+/* Ajuste para celular */
+@media (max-width: 600px) {
+
+    .familia-flor {
+        width: 42vw;
+        max-width: 175px;
+    }
+
+    .familia-flor-1 {
+        top: 18px;
+        left: -15px;
+    }
+
+    .familia-flor-2 {
+        top: 18px;
+        right: -15px;
+    }
+
+    .familia-flor-3 {
+        bottom: 18px;
+        left: -15px;
+    }
+
+    .familia-flor-4 {
+        right: -15px;
+        bottom: 18px;
+    }
+
+    .cruz-memoria {
+        margin-left: 5px;
+        font-size: .88em;
+        vertical-align: .18em;
+    }
+}
+
+
+/* Pantallas muy pequeñas */
+@media (max-width: 390px) {
+
+    .familia-flor {
+        width: 39vw;
+        max-width: 155px;
+    }
+
+    .familia-flor-1 {
+        left: -8px;
+    }
+
+    .familia-flor-2 {
+        right: -8px;
+    }
+
+    .familia-flor-3 {
+        left: -8px;
+    }
+
+    .familia-flor-4 {
+        right: -8px;
+    }
+
+}
+/* ==========================================
+   07 · MESA DE REGALOS
+========================================== */
+
+.seccion-regalos {
+    position: relative;
+    min-height: 100svh;
+    overflow: hidden;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 110px 35px;
+
+    background: var(--ivory);
+}
+
+.regalos-contenido {
+    position: relative;
+    z-index: 2;
+
+    width: min(88%, 820px);
+
+    text-align: center;
+}
+
+
+/* TÍTULO */
+
+.regalos-titulo {
+    margin: 0;
+
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(20px, 2vw, 28px);
+    font-weight: 500;
+
+    letter-spacing: 8px;
+
+    color: var(--ink);
+}
+
+
+/* SEPARADORES */
+
+.regalos-separador {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 14px;
+
+    margin: 28px auto 34px;
+}
+
+.regalos-separador span {
+    display: block;
+
+    width: 65px;
+    height: 1px;
+
+    background: var(--gold);
+}
+
+.regalos-separador b {
+    font-size: 14px;
+    font-weight: 400;
+
+    color: var(--gold);
+}
+
+
+/* FRASE */
+
+.regalos-frase {
+    margin: 0 0 34px;
+
+    font-family: 'Allura', cursive;
+    font-size: clamp(48px, 6vw, 72px);
+    font-weight: 400;
+
+    line-height: .95;
+
+    color: var(--rose);
+}
+
+
+/* TEXTO */
+
+.regalos-texto {
+    margin: 0 auto 25px;
+
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(16px, 1.7vw, 21px);
+
+    line-height: 1.6;
+    letter-spacing: 1px;
+
+    color: var(--ink);
+}
+
+
+/* REGALO */
+
+.regalos-ilustracion {
+    display: block;
+
+    width: min(250px, 45vw);
+    height: auto;
+
+    margin: 10px auto 8px;
+
+    object-fit: contain;
+}
+
+
+/* LIVERPOOL */
+
+.regalos-liverpool {
+    display: block;
+
+    margin: 0 auto 24px;
+
+    font-family: 'Allura', cursive;
+    font-size: clamp(48px, 5vw, 66px);
+    font-weight: 400;
+
+    line-height: 1;
+
+    text-align: center;
+
+    color: var(--ink);
+}
+
+
+/* BOTÓN */
+
+.regalos-boton {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 13px;
+
+    min-height: 56px;
+
+    padding: 0 28px;
+
+    border: 1px solid var(--gold);
+    border-radius: 999px;
+
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 14px;
+    font-weight: 600;
+
+    letter-spacing: 2px;
+
+    text-decoration: none;
+
+    color: var(--rose);
+    background: transparent;
+
+    transition:
+        transform .25s ease,
+        background .25s ease;
+}
+
+.regalos-boton:hover {
+    transform: translateY(-2px);
+
+    background: rgba(201, 160, 83, .08);
+}
+
+.regalos-icono {
+    color: var(--gold);
+
+    font-size: 17px;
+}
+
+.regalos-flecha {
+    color: var(--gold);
+
+    font-size: 18px;
+}
+
+
+/* CIERRE */
+
+.regalos-separador-final {
+    margin-top: 34px;
+    margin-bottom: 22px;
+}
+
+.regalos-gracias {
+    display: block;
+
+    margin: 0 auto;
+
+    font-family: 'Allura', cursive;
+    font-size: clamp(31px, 3.5vw, 43px);
+
+    line-height: 1.08;
+
+    text-align: center;
+
+    color: var(--rose);
+}
+
+
+/* ==========================================
+   07 · MESA DE REGALOS · CELULAR
+========================================== */
+
+@media (max-width: 600px) {
+
+    .seccion-regalos {
+        min-height: 100svh;
+
+        padding: 90px 22px;
+    }
+
+    .regalos-contenido {
+        width: 100%;
+    }
+
+    .regalos-titulo {
+        font-size: 18px;
+
+        letter-spacing: 5px;
+    }
+
+    .regalos-separador {
+        margin: 22px auto 28px;
+    }
+
+    .regalos-separador span {
+        width: 48px;
+    }
+
+    .regalos-frase {
+        margin-bottom: 28px;
+
+        font-size: 49px;
+
+        line-height: .92;
+    }
+
+    .regalos-texto {
+        margin-bottom: 20px;
+
+        font-size: 16px;
+
+        line-height: 1.5;
+    }
+
+    .regalos-ilustracion {
+        width: min(220px, 58vw);
+
+        margin: 8px auto 6px;
+    }
+
+    .regalos-liverpool {
+        margin: 0 auto 20px;
+
+        font-size: 48px;
+    }
+
+    .regalos-boton {
+        min-height: 54px;
+
+        padding: 0 22px;
+
+        font-size: 12px;
+
+        letter-spacing: 1.6px;
+    }
+
+    .regalos-separador-final {
+        margin-top: 30px;
+        margin-bottom: 18px;
+    }
+
+    .regalos-gracias {
+        font-size: 32px;
+
+        line-height: 1.08;
+    }
+}
+
+
+/* ==========================================
+   07 · CELULAR PEQUEÑO
+========================================== */
+
+@media (max-width: 390px) {
+
+    .seccion-regalos {
+        padding-left: 18px;
+        padding-right: 18px;
+    }
+
+    .regalos-frase {
+        font-size: 44px;
+    }
+
+    .regalos-ilustracion {
+        width: 205px;
+        max-width: 60vw;
+    }
+
+    .regalos-boton {
+        padding-left: 18px;
+        padding-right: 18px;
+
+        font-size: 11px;
+    }
+}
+
+
+/* ==========================================
+   08 · CONFIRMACIÓN DE ASISTENCIA
+========================================== */
+
+.seccion-rsvp {
+    position: relative;
+    min-height: 100svh;
+    overflow: hidden;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 110px 35px;
+
+    background: var(--ivory);
+}
+
+.rsvp-contenido {
+    position: relative;
+    z-index: 2;
+
+    width: min(88%, 820px);
+
+    text-align: center;
+}
+
+
+/* TÍTULO PEQUEÑO */
+
+.rsvp-superior {
+    margin: 0;
+
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 18px;
+    font-weight: 600;
+
+    letter-spacing: 8px;
+
+    color: var(--ink);
+}
+
+
+/* ASISTENCIA */
+
+.rsvp-titulo {
+    margin: 5px 0 0;
+
+    font-family: 'Allura', cursive;
+    font-size: clamp(62px, 8vw, 96px);
+    font-weight: 400;
+
+    line-height: .9;
+
+    color: var(--rose);
+}
+
+
+/* SEPARADORES */
+
+.rsvp-separador {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 14px;
+
+    margin: 28px auto;
+}
+
+.rsvp-separador span {
+    display: block;
+
+    width: 65px;
+    height: 1px;
+
+    background: var(--gold);
+}
+
+.rsvp-separador b {
+    font-size: 14px;
+    font-weight: 400;
+
+    color: var(--gold);
+}
+
+
+/* SOBRE */
+
+.rsvp-ilustracion {
+    display: block;
+
+    width: min(270px, 48vw);
+    height: auto;
+
+    margin: 0 auto 20px;
+
+    object-fit: contain;
+}
+
+
+/* FRASE */
+
+.rsvp-frase {
+    margin: 0 0 24px;
+
+    font-family: 'Allura', cursive;
+    font-size: clamp(42px, 5.5vw, 62px);
+    font-weight: 400;
+
+    line-height: 1;
+
+    color: var(--rose);
+}
+
+
+/* TEXTO */
+
+.rsvp-texto {
+    margin: 0 0 18px;
+
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(17px, 1.8vw, 22px);
+
+    line-height: 1.5;
+
+    color: var(--ink);
+}
+
+
+/* FECHA LÍMITE */
+
+.rsvp-fecha {
+    display: inline-block;
+
+    margin: 0 auto 26px;
+
+    padding: 12px 25px;
+
+    border: 1px solid var(--gold);
+    border-radius: 999px;
+
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 18px;
+    font-weight: 500;
+
+    letter-spacing: 4px;
+
+    color: var(--ink);
+}
+
+
+/* BOTÓN WHATSAPP */
+
+.rsvp-boton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 12px;
+
+    width: fit-content;
+
+    min-height: 56px;
+
+    margin: 0 auto;
+
+    padding: 0 28px;
+
+    border: 1px solid var(--gold);
+    border-radius: 999px;
+
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 14px;
+    font-weight: 600;
+
+    letter-spacing: 2px;
+
+    text-decoration: none;
+
+    color: var(--rose);
+    background: transparent;
+
+    transition:
+        transform .25s ease,
+        background .25s ease;
+}
+
+.rsvp-boton:hover {
+    transform: translateY(-2px);
+
+    background: rgba(201, 160, 83, .08);
+}
+
+.rsvp-boton span {
+    font-size: 18px;
+
+    color: var(--gold);
+}
+
+
+/* CIERRE */
+
+.rsvp-separador-final {
+    margin-top: 32px;
+    margin-bottom: 18px;
+}
+
+.rsvp-gracias {
+    margin: 0;
+
+    font-family: 'Allura', cursive;
+    font-size: 46px;
+    font-weight: 400;
+
+    line-height: 1;
+
+    color: var(--rose);
+}
+
+.rsvp-cierre {
+    margin: 10px 0 0;
+
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 16px;
+
+    letter-spacing: 2px;
+
+    color: var(--ink);
+}
+
+
+/* ==========================================
+   08 · CONFIRMACIÓN · CELULAR
+========================================== */
+
+@media (max-width: 600px) {
+
+    .seccion-rsvp {
+        min-height: 100svh;
+
+        padding: 90px 22px;
+    }
+
+    .rsvp-contenido {
+        width: 100%;
+    }
+
+    .rsvp-superior {
+        font-size: 14px;
+
+        letter-spacing: 5px;
+    }
+
+    .rsvp-titulo {
+        font-size: 68px;
+    }
+
+    .rsvp-separador {
+        margin: 22px auto 24px;
+    }
+
+    .rsvp-separador span {
+        width: 48px;
+    }
+
+    .rsvp-ilustracion {
+        width: min(225px, 60vw);
+
+        margin-bottom: 18px;
+    }
+
+    .rsvp-frase {
+        margin-bottom: 22px;
+
+        font-size: 44px;
+    }
+
+    .rsvp-texto {
+        font-size: 16px;
+    }
+
+    .rsvp-fecha {
+        padding: 11px 18px;
+
+        font-size: 15px;
+
+        letter-spacing: 3px;
+    }
+
+    .rsvp-boton {
+        min-height: 54px;
+
+        padding: 0 22px;
+
+        font-size: 12px;
+
+        letter-spacing: 1.5px;
+    }
+
+    .rsvp-gracias {
+        font-size: 40px;
+    }
+
+    .rsvp-cierre {
+        font-size: 14px;
+
+        line-height: 1.4;
+    }
+}
+
+
+/* ==========================================
+   08 · CELULAR PEQUEÑO
+========================================== */
+
+@media (max-width: 390px) {
+
+    .seccion-rsvp {
+        padding-left: 18px;
+        padding-right: 18px;
+    }
+
+    .rsvp-titulo {
+        font-size: 62px;
+    }
+
+    .rsvp-frase {
+        font-size: 40px;
+    }
+
+    .rsvp-ilustracion {
+        width: 205px;
+        max-width: 62vw;
+    }
+
+    .rsvp-fecha {
+        font-size: 13px;
+
+        letter-spacing: 2px;
+    }
+
+    .rsvp-boton {
+        padding-left: 18px;
+        padding-right: 18px;
+
+        font-size: 11px;
+    }
+}
+/* ==========================================
+   DESGLOSE DE LUGARES
+========================================== */
+
+.lugares-desglose {
+    margin: 12px 0 0;
+
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 18px;
+    font-weight: 500;
+
+    letter-spacing: 2px;
+
+    color: var(--rose);
+}
+
+@media (max-width: 600px) {
+
+    .lugares-desglose {
+        margin-top: 10px;
+
+        font-size: 16px;
+
+        letter-spacing: 1.5px;
+    }
+
+}
+/* ==========================================
+   09 · CUENTA REGRESIVA
+========================================== */
+
+.cuenta-regresiva {
+    min-height: 100vh;
+    box-sizing: border-box;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 100px 40px;
+
+    text-align: center;
+    background: var(--ivory);
+}
+
+.cuenta-contenido {
+    width: 100%;
+    max-width: 950px;
+    margin: 0 auto;
+}
+
+.cuenta-etiqueta {
+    margin: 0 0 28px;
+
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 18px;
+    letter-spacing: 7px;
+
+    color: var(--navy);
+}
+
+.cuenta-titulo {
+    margin: 38px 0 65px;
+
+    font-family: 'Allura', cursive;
+    font-size: clamp(48px, 6vw, 76px);
+    font-weight: 400;
+    line-height: 1;
+
+    color: var(--rose);
+}
+
+.contador {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: clamp(25px, 5vw, 70px);
+
+    width: 100%;
+}
+
+.contador-item {
+    min-width: 110px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contador-numero {
+    display: block;
+
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(52px, 7vw, 82px);
+    font-weight: 400;
+    line-height: 1;
+
+    color: var(--gold);
+}
+
+.contador-texto {
+    margin-top: 14px;
+
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 13px;
+    letter-spacing: 3px;
+
+    color: var(--navy);
+}
+
+.separador-contador {
+    margin-top: 60px;
+}
+
+.cuenta-fecha {
+    margin: 35px 0 0;
+
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 19px;
+    font-weight: 600;
+    letter-spacing: 5px;
+
+    color: var(--navy);
+}
+
+
+/* ==========================================
+   CUENTA REGRESIVA · MÓVIL
+========================================== */
+
+@media (max-width: 600px) {
+
+    .cuenta-regresiva {
+        min-height: 100svh;
+        padding: 80px 24px;
+    }
+
+    .cuenta-etiqueta {
+        font-size: 14px;
+        letter-spacing: 4px;
+        line-height: 1.8;
+    }
+
+    .cuenta-titulo {
+        margin: 32px 0 50px;
+        font-size: 50px;
+    }
+
+    .contador {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+
+        max-width: 330px;
+        margin: 0 auto;
+
+        gap: 42px 20px;
+    }
+
+    .contador-item {
+        min-width: 0;
+    }
+
+    .contador-numero {
+        font-size: 58px;
+    }
+
+    .contador-texto {
+        margin-top: 10px;
+
+        font-size: 11px;
+        letter-spacing: 2px;
+    }
+
+    .separador-contador {
+        margin-top: 50px;
+    }
+
+    .cuenta-fecha {
+        font-size: 15px;
+        letter-spacing: 3px;
+    }
+
+}
+
+/* ==========================================
+   10 · CIERRE
+========================================== */
+
+.seccion-cierre {
+    min-height: 100vh;
+    padding: 100px 24px 85px;
+    background: #fbf8f2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.cierre-contenido {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* VERSÍCULO — PROTAGONISTA */
+
+.cierre-versiculo {
+    margin: 0 auto;
+    max-width: 850px;
+    color: #292a36;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 30px;
+    line-height: 1.75;
+    letter-spacing: 0.03em;
+    font-weight: 400;
+}
+
+/* REFERENCIA BÍBLICA */
+
+.cierre-cita {
+    margin: 22px 0 38px;
+    color: #c99a43;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 13px;
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+}
+
+/* SEPARADOR DORADO */
+
+.cierre-separador {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 18px;
+    margin: 0 auto 38px;
+}
+
+.cierre-separador > span:not(.cierre-estrella) {
+    width: 70px;
+    height: 1px;
+    background: #c99a43;
+}
+
+.cierre-estrella {
+    color: #c99a43;
+    font-size: 12px;
+}
+
+/* FRASE FINAL — MÁS DELICADA */
+
+.cierre-frase {
+    margin: 0 0 26px;
+    color: #df8d8d;
+    font-family: "Brittany Signature", cursive;
+    font-size: clamp(25px, 3vw, 34px);
+    line-height: 1.4;
+    font-weight: 400;
+}
+
+/* MONOGRAMA — FIRMA FINAL */
+
+.cierre-monograma {
+    display: block;
+    width: min(185px, 48vw);
+    height: auto;
+    margin: 8px auto 0;
+}
+
+
+/* ==========================================
+   CIERRE · CELULAR
+========================================== */
+
+@media (max-width: 600px) {
+
+    .seccion-cierre {
+        min-height: 100svh;
+        padding: 75px 22px 60px;
+    }
+
+    .cierre-contenido {
+        max-width: 100%;
+    }
+
+    .cierre-versiculo {
+        max-width: 500px;
+        font-size: 21px;
+        line-height: 1.7;
+        letter-spacing: 0.02em;
+    }
+
+    .cierre-cita {
+        margin: 18px 0 30px;
+        font-size: 11px;
+        letter-spacing: 0.28em;
+    }
+
+    .cierre-separador {
+        gap: 13px;
+        margin-bottom: 30px;
+    }
+
+    .cierre-separador > span:not(.cierre-estrella) {
+        width: 48px;
+    }
+
+    .cierre-estrella {
+        font-size: 10px;
+    }
+
+    .cierre-frase {
+        margin-bottom: 20px;
+        font-size: 27px;
+        line-height: 1.4;
+    }
+
+    .cierre-monograma {
+        width: min(160px, 48vw);
+        margin: 5px auto 0;
+    }
+}
+
+/* FLORES DEL CIERRE */
+
+.seccion-cierre {
+    position: relative;
+    overflow: hidden;
+}
+
+.cierre-flor {
+    position: absolute;
+    z-index: 1;
+    width: min(420px, 36vw);
+    height: auto;
+    pointer-events: none;
+}
+
+.cierre-flor-superior {
+    top: -10px;
+    left: -10px;
+}
+
+.cierre-flor-inferior {
+    right: -10px;
+    bottom: -10px;
+    transform: rotate(180deg);
+}
+
+.cierre-contenido {
+    position: relative;
+    z-index: 2;
+}
+
+
+/* CELULAR */
+
+@media (max-width: 600px) {
+
+    .cierre-flor {
+        width: min(230px, 55vw);
+    }
+
+    .cierre-flor-superior {
+        top: -5px;
+        left: -10px;
+    }
+
+    .cierre-flor-inferior {
+        right: -10px;
+        bottom: -5px;
+    }
+}
+
+/* ==========================================
+   BOTÓN DE MÚSICA
+========================================== */
+
+.boton-musica {
+    position: fixed;
+    right: 28px;
+    bottom: 28px;
+
+    width: 54px;
+    height: 54px;
+
+    border-radius: 50%;
+    border: 1px solid #df8f91;
+
+    background: #fffaf4;
+    color: #df8f91;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 9999;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+}
+
+.boton-musica:hover {
+    transform: scale(1.08);
+}
+
+.boton-musica:hover {
+    transform: translateY(-2px);
+
+    background: rgba(253, 249, 243, 1);
+}
+
+.boton-musica.reproduciendo {
+    animation: musicaPulso 2.5s ease-in-out infinite;
+}
+
+@keyframes musicaPulso {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.06);
+    }
+}
+
+
+/* CELULAR */
+
+@media (max-width: 600px) {
+
+    .boton-musica {
+        right: 18px;
+        bottom: 18px;
+
+        width: 48px;
+        height: 48px;
+
+        font-size: 21px;
+    }
+}
+
+/* ==========================================
+   SOBRE DE ENTRADA
+========================================== */
+
+.entrada-sobre {
+    position: fixed;
+    inset: 0;
+    z-index: 99999;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #fbf8f2;
+
+    overflow: hidden;
+}
+
+.sobre-presentacion {
+    width: 100%;
+    max-width: 720px;
+
+    padding: 40px 24px;
+
+    text-align: center;
+}
+
+/* MENSAJE */
+
+.sobre-mensaje {
+    margin: 0 0 42px;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 18px;
+    letter-spacing: 0.16em;
+
+    color: #292a36;
+}
+
+
+/* SOBRE */
+
+.sobre {
+    position: relative;
+
+    width: min(520px, 82vw);
+    aspect-ratio: 1.55 / 1;
+
+    margin: 0 auto 42px;
+
+    perspective: 1200px;
+}
+
+/* PARTE TRASERA */
+
+.sobre-carta {
+    position: absolute;
+
+    left: 8%;
+    right: 8%;
+    top: 26%;
+    bottom: 12%;
+    opacity: 0;
+
+    border-radius: 4px;
+
+    background:
+        linear-gradient(
+            180deg,
+            #fffdf9 0%,
+            #f8eee8 100%
+        );
+
+    border: 1px solid rgba(201, 154, 67, 0.35);
+
+    box-shadow:
+        0 12px 30px rgba(75, 55, 40, 0.08);
+
+    z-index: 1;
+}
+
+
+/* CUERPO DEL SOBRE */
+
+.sobre-cuerpo {
+    position: absolute;
+    inset: 25% 0 0;
+
+    background:
+        linear-gradient(
+            145deg,
+            #f5dfdc,
+            #ead0cd
+        );
+
+    border: 1px solid rgba(201, 154, 67, 0.32);
+
+    border-radius: 4px 4px 12px 12px;
+
+    box-shadow:
+        0 18px 40px rgba(75, 55, 40, 0.12);
+
+    z-index: 3;
+}
+
+/* TRIÁNGULOS DEL SOBRE */
+
+.sobre-cuerpo::before,
+.sobre-cuerpo::after {
+    content: "";
+
+    position: absolute;
+    bottom: 0;
+
+    width: 0;
+    height: 0;
+
+    border-style: solid;
+
+    z-index: 4;
+}
+
+.sobre-cuerpo::before {
+    left: 0;
+
+    border-width:
+        0
+        0
+        190px
+        260px;
+
+    border-color:
+        transparent
+        transparent
+        #f8ebe7
+        transparent;
+}
+
+.sobre-cuerpo::after {
+    right: 0;
+
+    border-width:
+        0
+        260px
+        190px
+        0;
+
+    border-color:
+        transparent
+        transparent
+        #f1d9d5
+        transparent;
+}
+
+
+/* SOLAPA SUPERIOR */
+
+.sobre-solapa {
+    position: absolute;
+
+    top: 25%;
+    left: 0;
+
+    width: 100%;
+    height: 48%;
+
+    transform-origin: top center;
+
+    clip-path: polygon(
+        0 0,
+        50% 100%,
+        100% 0
+    );
+
+    background:
+        linear-gradient(
+            180deg,
+            #f8e8e4,
+            #efd5d1
+        );
+
+    border-top: 1px solid rgba(201, 154, 67, 0.28);
+
+    z-index: 5;
+
+    transition:
+        transform 0.9s cubic-bezier(.22,.61,.36,1),
+        z-index 0s linear 0.4s;
+}
+
+
+/* SELLO */
+
+.sobre-sello {
+    position: absolute;
+
+    left: 50%;
+    top: 54%;
+
+    transform: translate(-50%, -50%);
+
+    width: 78px;
+    height: 78px;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+
+    background:
+        radial-gradient(
+            circle at 35% 30%,
+            #f3d58b,
+            #c99532 65%,
+            #a97825 100%
+        );
+
+    border: 2px solid rgba(255,255,255,0.45);
+
+    box-shadow:
+        0 5px 14px rgba(110, 78, 31, 0.25);
+
+    color: #fffaf3;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 20px;
+
+    z-index: 6;
+}
+
+.sobre-amp {
+    font-size: 15px;
+    opacity: 0.9;
+}
+
+
+/* BOTÓN */
+
+.boton-abrir {
+    min-width: 250px;
+
+    padding: 17px 30px;
+
+    border-radius: 999px;
+
+    border: 1px solid #c99a43;
+
+    background: transparent;
+
+    color: #df8f91;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 13px;
+
+    letter-spacing: 0.18em;
+
+    cursor: pointer;
+
+    transition:
+        transform .25s ease,
+        background .25s ease;
+}
+
+.boton-abrir:hover {
+    transform: translateY(-2px);
+    background: rgba(223, 143, 145, 0.06);
+}
+
+
+/* ==========================================
+   CELULAR
+========================================== */
+
+@media (max-width: 600px) {
+
+    .sobre-presentacion {
+        padding: 30px 20px;
+    }
+
+    .sobre-mensaje {
+        margin-bottom: 32px;
+
+        font-size: 15px;
+        line-height: 1.7;
+
+        letter-spacing: 0.12em;
+    }
+
+    .sobre {
+        width: min(430px, 88vw);
+        margin-bottom: 34px;
+    }
+
+    .sobre-sello {
+        width: 68px;
+        height: 68px;
+
+        font-size: 18px;
+    }
+
+    .boton-abrir {
+        min-width: 230px;
+
+        padding: 15px 25px;
+
+        font-size: 12px;
+    }
+
+}
+
+/* =====================================
+   FLORES - PANTALLA DEL SOBRE
+===================================== */
+
+.entrada-sobre {
+    position: fixed;
+    inset: 0;
+    overflow: hidden;
+}
+
+.sobre-flores {
+    position: absolute;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.sobre-flores-superior {
+    width: min(34vw, 430px);
+    top: -25px;
+    left: -35px;
+}
+
+.sobre-flores-inferior {
+    width: min(38vw, 480px);
+    right: -45px;
+    bottom: -40px;
+}
+
+.sobre-presentacion {
+    position: relative;
+    z-index: 2;
+}
+
+/* ==========================================
+   SOBRE DE ENTRADA — CELULAR
+========================================== */
+
+@media (max-width: 600px) {
+
+    .sobre-flores-superior {
+        width: 42vw;
+        max-width: 190px;
+        top: -10px;
+        left: -18px;
+    }
+
+    .sobre-flores-inferior {
+        width: 48vw;
+        max-width: 215px;
+        right: -18px;
+        bottom: -15px;
+    }
+
+}
+
+/* =========================================
+   MONOGRAMA EN EL SELLO DEL SOBRE
+========================================= */
+
+.sobre-sello {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: visible;
+}
+
+.sobre-monograma {
+    width: 105px;
+    height: auto;
+    display: block;
+}
+
+/* =========================================
+   TAMAÑO DEL MONOGRAMA DEL SELLO
+========================================= */
+
+.sobre-monograma {
+    width: 95px !important;
+    height: 95px !important;
+    max-width: 95px !important;
+
+    object-fit: contain;
+    display: block;
+}
+
+.sobre-monograma {
+    width: 95px !important;
+    height: 95px !important;
+    max-width: 95px !important;
+    object-fit: contain;
+    display: block;
+}
+
+/* =========================================
+   AJUSTE FINAL — BOTÓN DEL SOBRE
+   ========================================= */
+
+.sobre-presentacion .boton-abrir {
+    display: block !important;
+    position: relative !important;
+
+    margin: 24px auto 0 !important;
+
+    left: auto !important;
+    right: auto !important;
+    top: auto !important;
+    bottom: auto !important;
+
+    transform: none !important;
+}
+
+/* =========================================
+   ANIMACIÓN — ABRIR SOBRE
+   ========================================= */
+
+/* La solapa se prepara para poder abrirse */
+.sobre-solapa {
+    transform-origin: top center;
+    transition: transform 0.8s ease;
+}
+
+/* Cuando el sobre recibe la clase "abierto" */
+.sobre.abierto .sobre-solapa {
+    transform: rotateX(180deg);
+}
+
+/* El sello desaparece suavemente */
+.sobre-sello {
+    transition:
+        transform 0.35s ease,
+        opacity 0.35s ease;
+}
+
+.sobre.abierto .sobre-sello {
+    transform: translate(-50%, -50%) scale(0.6);
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* =========================================
+   ANIMACIÓN — CARTA SALIENDO
+========================================= */
+
+.sobre-carta {
+    transition:
+        transform 0.9s ease,
+        opacity 0.45s ease;
+}
+
+.sobre.abierto .sobre-carta {
+    transform: translateY(-125px);
+    opacity: 1;
+    transition-delay: 0.45s;
+}
+
+/* =========================================
+   TRANSICIÓN DEL SOBRE A LA INVITACIÓN
+========================================= */
+
+.entrada-sobre {
+    transition: opacity 1s ease, visibility 1s ease;
+}
+
+.entrada-sobre.saliendo {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
