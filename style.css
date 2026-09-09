@@ -2,10 +2,11 @@
 
 :root {
     --ivory: #FDF9F3;
-    --rose: #D98986;
+    --rose: #CF8E8E;
     --gold: #C99F55;
     --ink: #292936;
     --sage: #AAB49A;
+    color-scheme: light only;
 }
 
 * {
@@ -328,7 +329,7 @@ h1 {
     margin: 0;
 
     font-family: 'Cormorant Garamond', serif;
-    font-size: 17px;
+    font-size: 25px;
     font-weight: 600;
 
     line-height: 1.7;
@@ -1607,7 +1608,7 @@ h1 {
     margin: 0 auto 25px;
 
     font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(16px, 1.7vw, 21px);
+    font-size: clamp(22px, 2vw, 23px);
 
     line-height: 1.6;
     letter-spacing: 1px;
@@ -2106,13 +2107,13 @@ h1 {
     }
 
     .rsvp-frase {
-        margin-bottom: 22px;
+        margin-bottom: 20px;
 
         font-size: 44px;
     }
 
     .rsvp-texto {
-        font-size: 16px;
+        font-size: 20px;
     }
 
     .rsvp-fecha {
@@ -2138,7 +2139,7 @@ h1 {
     }
 
     .rsvp-cierre {
-        font-size: 14px;
+        font-size: 20px;
 
         line-height: 1.4;
     }
@@ -2727,6 +2728,8 @@ h1 {
     border: 1px solid rgba(201, 154, 67, 0.32);
 
     border-radius: 4px 4px 12px 12px;
+    overflow: hidden;
+
 
     box-shadow:
         0 18px 40px rgba(75, 55, 40, 0.12);
@@ -2736,51 +2739,65 @@ h1 {
 
 /* TRIÁNGULOS DEL SOBRE */
 
+.sobre-cuerpo {
+    position: absolute;
+    inset: 25% 0 0;
+
+    background:
+        linear-gradient(
+            145deg,
+            #f5dfdc,
+            #ead0cd
+        );
+
+    border: 1px solid rgba(201, 154, 67, 0.32);
+    border-radius: 4px 4px 12px 12px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 18px 40px rgba(75, 55, 40, 0.12);
+
+    z-index: 3;
+}
+
+/* Laterales del sobre */
 .sobre-cuerpo::before,
 .sobre-cuerpo::after {
     content: "";
-
     position: absolute;
-    bottom: 0;
-
-    width: 0;
-    height: 0;
-
-    border-style: solid;
-
-    z-index: 4;
+    inset: 0;
+    pointer-events: none;
 }
 
 .sobre-cuerpo::before {
-    left: 0;
-
-    border-width:
-        0
-        0
-        190px
-        260px;
-
-    border-color:
-        transparent
-        transparent
-        #f8ebe7
-        transparent;
+    background:
+        linear-gradient(
+            32deg,
+            transparent 49.5%,
+            rgba(201, 154, 67, 0.24) 50%,
+            transparent 50.5%
+        ),
+        linear-gradient(
+            to bottom right,
+            #f1d9d5 0 49.7%,
+            transparent 50%
+        );
 }
 
 .sobre-cuerpo::after {
-    right: 0;
-
-    border-width:
-        0
-        260px
-        190px
-        0;
-
-    border-color:
-        transparent
-        transparent
-        #f1d9d5
-        transparent;
+    background:
+        linear-gradient(
+            -32deg,
+            transparent 49.5%,
+            rgba(201, 154, 67, 0.24) 50%,
+            transparent 50.5%
+        ),
+        linear-gradient(
+            to bottom left,
+            #efd3d0 0 49.7%,
+            transparent 50%
+        );
 }
 
 
